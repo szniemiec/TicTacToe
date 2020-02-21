@@ -122,6 +122,19 @@ namespace TicTacToe
 
             #endregion
 
+            #region Oblique Winning Condition
+            
+            else if (board.GetIndex(1) == board.GetIndex(5) && board.GetIndex(5) == board.GetIndex(9))
+            {
+                return 1;
+            }
+            else if (board.GetIndex(3) == board.GetIndex(5) && board.GetIndex(5) == board.GetIndex(7))
+            {
+                return 1;
+            }
+
+            #endregion
+
             #region Draw
 
             else if (board.GetIndex(1) != '1' && board.GetIndex(2) != '2' && board.GetIndex(3) != '3' &&
